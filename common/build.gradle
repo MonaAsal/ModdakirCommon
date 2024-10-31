@@ -35,14 +35,6 @@ android {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
-    signingConfigs {
-        config {
-            keyAlias 'moddakir'
-            keyPassword 'arabdt123'
-            storeFile file('D:\\androidApps\\modakkir_android\\moddakir.jks')
-            storePassword 'arabdt123'
-        }
-    }
 
     buildTypes {
         release {
@@ -67,7 +59,6 @@ android {
                 }
             }
 
-            signingConfig signingConfigs.config
 
             shrinkResources false
             manifestPlaceholders = [BranchDebug: false]
@@ -86,7 +77,6 @@ android {
                 aaptOptions.cruncherEnabled = false
                 ext.alwaysUpdateBuildId = false
             }
-            signingConfig signingConfigs.config
             shrinkResources false
             buildConfigField "String", BASE_URL, "\"https://" + URLAPi + "/" + VersionPro + "/api/\""
             buildConfigField "String", SOCKET_URL, "\"https://" + SOCKETURL + "\""
