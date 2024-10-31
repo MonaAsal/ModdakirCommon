@@ -236,8 +236,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId 'com.github.MonaAdelAsal'
-                artifactId 'moddakir'
-                version '1.0.0'
+                artifactId 'common'
+                version '1.0'
             }
         }
     }
